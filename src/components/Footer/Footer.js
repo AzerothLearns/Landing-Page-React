@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '../../globalStyles';
 import {
   FaFacebook,
@@ -14,6 +14,7 @@ import {
   FooterSubHeading,
   Form,
   FormInput,
+  FormTextarea,
   FooterLinksContainer,
   FooterLinksWrapper,
   FooterLinkItems,
@@ -21,71 +22,100 @@ import {
   FooterLink,
   SocialMedia,
   SocialMediaWrap,
-  SocialLogo,
-  SocialIcon,
   WebsiteRights,
   SocialIcons,
   SocialIconLink
 } from './Footer.elements';
 
 function Footer() {
+  const [formData, setFormData] = useState({
+    name: '',
+    company: '',
+    email: '',
+    inquiry: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:5000/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        alert('Inquiry sent successfully!');
+        setFormData({ name: '', company: '', email: '', inquiry: '' });
+      } else {
+        alert('Failed to send inquiry. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Failed to send inquiry. Please try again.');
+    }
+  };
 
   const date = new Date();
 
   return (
     <FooterContainer>
       <FooterSubscription>
-        <FooterSubHeading>
-          Join our exclusive membership to receive the latest news and trends
-        </FooterSubHeading>
-        <FooterSubText>You can unsubscribe at any time.</FooterSubText>
-        <Form>
-          <FormInput name='email' type='email' placeholder='Your Email' />
-          <Button fontBig>Subscribe</Button>
+        <FooterSubHeading>Contact Us</FooterSubHeading>
+        <FooterSubText>Send us your inquiry and we'll get back to you soon.</FooterSubText>
+        <Form onSubmit={handleSubmit}>
+          <FormInput
+            name='name'
+            type='text'
+            placeholder='Your Name'
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <FormInput
+            name='company'
+            type='text'
+            placeholder='Company Name'
+            value={formData.company}
+            onChange={handleChange}
+            required
+          />
+          <FormInput
+            name='email'
+            type='email'
+            placeholder='Your Email'
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <FormTextarea
+            name='inquiry'
+            placeholder='Your Inquiry'
+            value={formData.inquiry}
+            onChange={handleChange}
+            required
+          />
+          <Button fontBig type='submit'>Send Inquiry</Button>
         </Form>
       </FooterSubscription>
       <FooterLinksContainer>
         <FooterLinksWrapper>
           <FooterLinkItems>
-            <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to='/sign-up'>How it works</FooterLink>
-            <FooterLink to='/'>Testimonials</FooterLink>
-            <FooterLink to='/'>Careers</FooterLink>
-            <FooterLink to='/'>Investors</FooterLink>
-            <FooterLink to='/'>Terms of Service</FooterLink>
-          </FooterLinkItems>
-          <FooterLinkItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>
-            <FooterLink to='/'>Contact</FooterLink>
-            <FooterLink to='/'>Support</FooterLink>
-            <FooterLink to='/'>Destinations</FooterLink>
-            <FooterLink to='/'>Sponsorships</FooterLink>
-          </FooterLinkItems>
-        </FooterLinksWrapper>
-        <FooterLinksWrapper>
-          <FooterLinkItems>
-            <FooterLinkTitle>Videos</FooterLinkTitle>
-            <FooterLink to='/'>Submit Video</FooterLink>
-            <FooterLink to='/'>Ambassadors</FooterLink>
-            <FooterLink to='/'>Agency</FooterLink>
-            <FooterLink to='/'>Influencer</FooterLink>
-          </FooterLinkItems>
-          <FooterLinkItems>
-            <FooterLinkTitle>Social Media</FooterLinkTitle>
-            <FooterLink to='/'>Instagram</FooterLink>
-            <FooterLink to='/'>Facebook</FooterLink>
-            <FooterLink to='/'>Youtube</FooterLink>
-            <FooterLink to='/'>Twitter</FooterLink>
+            Email: <a href="mailto:sales@cfnadigitalsolution.com" style={{ color: 'white' }}>sales@cfnadigitalsolution.com</a>
+            <p>Phone:(+45) 31 71 79 83 </p>
+            <p>Location: Denmark, Copenhagen</p>
           </FooterLinkItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
-          <SocialLogo to='/'>
-            <SocialIcon />
-            ULTRA
-          </SocialLogo>
-          <WebsiteRights>ULTRA © {date.getFullYear()} </WebsiteRights>
+          <WebsiteRights>CFNA Digital Solutions © {date.getFullYear()} </WebsiteRights>
           <SocialIcons>
             <SocialIconLink href='/' target='_blank' aria-label='Facebook'>
               <FaFacebook />

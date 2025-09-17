@@ -2,6 +2,7 @@ import React from 'react'
 import {InfoSec, InfoRow, InfoColumn, TextWrapper, TopLine, Heading, Subtitle, ImgWrapper, Img} from './InfoSection.elements'
 import { Container, Button } from '../../globalStyles'
 import { Link } from 'react-router-dom'
+import { FaCheck } from 'react-icons/fa';
 
  const InfoSection = ({ 
     
@@ -28,12 +29,26 @@ import { Link } from 'react-router-dom'
                             <TextWrapper>
                             <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                             <Heading lightText={lightText}>{headline}</Heading>
-                            <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-                            <Link to='/sign-up'>
-                            <Button big fontBig primary={primary}>
-                                {buttonLabel}
-                            </Button>
-                            </Link>
+                            {Array.isArray(description) ? (
+                              description.map((item, index) => (
+                                <div key={index} style={{ marginBottom: '20px', display: 'flex', alignItems: 'flex-start' }}>
+                                  <FaCheck style={{ color: '#4B59F7', marginRight: '10px', marginTop: '5px', fontSize: '20px' }} />
+                                  <div>
+                                    <h4 style={{ color: lightText ? '#f7f8fa' : '#1c2237', fontSize: '20px', lineHeight: '24px', fontWeight: '700', marginBottom: '8px' }}>{item.title}</h4>
+                                    <Subtitle lightTextDesc={lightTextDesc} style={{ fontSize: '16px', lineHeight: '24px' }}>{item.description}</Subtitle>
+                                  </div>
+                                </div>
+                              ))
+                            ) : (
+                              <Subtitle lightTextDesc={lightTextDesc} dangerouslySetInnerHTML={{ __html: description }} />
+                            )}
+                            {buttonLabel && (
+                              <Link to='/sign-up'>
+                                <Button big fontBig primary={primary}>
+                                  {buttonLabel}
+                                </Button>
+                              </Link>
+                            )}
                             </TextWrapper>
                         </InfoColumn>
                         <InfoColumn>

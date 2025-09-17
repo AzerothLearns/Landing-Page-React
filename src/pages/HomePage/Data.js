@@ -4,10 +4,10 @@ export const homeObjOne = {
     lightTopLine: true,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Marketing Agency',
-    headline: 'Lead Generation Specialist for Online Businesses',
+    topLine: 'Automation Agency',
+    headline: 'Less Work, More Results',
     description:
-      'We help business owners increase their revenue. Our team of unique specialist can help you achieve your business goals.',
+      'We help businesses save time and boost productivity by automating repetitive tasks, so you can focus on growth instead of busywork.',
     buttonLabel: 'Get Started',
     imgStart: '',
     img: require('../../images/svg-1.svg'),
@@ -38,12 +38,24 @@ export const homeObjOne = {
     lightTopLine: false,
     lightText: false,
     lightTextDesc: false,
-    topLine: 'Sarah Jeni',
+  
     headline:
-      'Ultra helped me increase my revenue by over 3X in less than 3 months!',
-    description:
-      "Their team is wonderful! I can't believe I didn't start working with them earlier.",
-    buttonLabel: 'View Case Study',
+      'Why Choose Us?',
+    description: [
+      {
+        title: "Tailored Solutions",
+        description: "We don’t do one-size-fits-all. Every workflow we build is customized to your business."
+      },
+      {
+        title: "Time & Cost Savings",
+        description: "Free up your team to focus on what really matter;growth, customers, and strategy."
+      },
+      {
+        title: "Proven Tools & Tech",
+        description: "From CRM integrations to AI-powered automations, we use the best platforms to maximize results."
+      }
+    ],
+    buttonLabel: '',
     imgStart: 'start',
     alt: 'Vault',
     start: 'true'
