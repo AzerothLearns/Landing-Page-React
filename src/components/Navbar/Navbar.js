@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import { Nav, 
     NavbarContainer, 
     NavLogo, 
-    NavIcon, 
     HamburgerIcon,
     NavMenu,
     NavItem,
@@ -65,8 +64,7 @@ function Navbar() {
             <Nav>
                 <NavbarContainer>
                     <NavLogo to='/'> 
-                        <NavIcon />
-                            ULTRA
+                        <img src={require('../../images/CFNALOGO20.jpg')} alt="CFNA Logo" style={{ height: '40px', width: 'auto' }} />
                     </NavLogo>
                     <HamburgerIcon onClick={handleClick}>
                         {click ? <FaTimes /> : <FaBars />}
