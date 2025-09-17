@@ -64,7 +64,7 @@ function Navbar() {
             <Nav>
                 <NavbarContainer>
                     <NavLogo to='/'> 
-                        <img src={require('../../images/CFNALOGO20.jpg')} alt="CFNA Logo" style={{ height: '40px', width: 'auto' }} />
+                        CFNA Digital Solutions
                     </NavLogo>
                     <HamburgerIcon onClick={handleClick}>
                         {click ? <FaTimes /> : <FaBars />}
