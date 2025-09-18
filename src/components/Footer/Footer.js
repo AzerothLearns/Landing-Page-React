@@ -26,8 +26,11 @@ import {
   SocialIcons,
   SocialIconLink
 } from './Footer.elements';
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
+  const { t } = useTranslation();
+
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -66,13 +69,13 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterSubscription>
-        <FooterSubHeading>Contact Us</FooterSubHeading>
-        <FooterSubText>Send us your inquiry and we'll get back to you soon.</FooterSubText>
+        <FooterSubHeading>{t('footer.contactUs')}</FooterSubHeading>
+        <FooterSubText>{t('footer.sendInquiry')}</FooterSubText>
         <Form onSubmit={handleSubmit}>
           <FormInput
             name='name'
             type='text'
-            placeholder='Your Name'
+            placeholder={t('footer.yourName')}
             value={formData.name}
             onChange={handleChange}
             required
@@ -80,7 +83,7 @@ function Footer() {
           <FormInput
             name='company'
             type='text'
-            placeholder='Company Name'
+            placeholder={t('footer.companyName')}
             value={formData.company}
             onChange={handleChange}
             required
@@ -88,28 +91,28 @@ function Footer() {
           <FormInput
             name='email'
             type='email'
-            placeholder='Your Email'
+            placeholder={t('footer.yourEmail')}
             value={formData.email}
             onChange={handleChange}
             required
           />
           <FormTextarea
             name='inquiry'
-            placeholder='Your Inquiry'
+            placeholder={t('footer.yourInquiry')}
             value={formData.inquiry}
             onChange={handleChange}
             required
           />
-          <Button fontBig type='submit'>Send Inquiry</Button>
+          <Button fontBig type='submit'>{t('footer.sendInquiryBtn')}</Button>
         </Form>
       </FooterSubscription>
       <FooterLinksContainer>
         <FooterLinksWrapper>
           <FooterLinkItems>
-            <FooterLinkTitle>Contact Us</FooterLinkTitle>
-            Email: <a href="mailto:sales@cfnadigitalsolution.com" style={{ color: 'white' }}>sales@cfnadigitalsolution.com</a>
-            <p>Phone:(+45) 31 71 79 83 </p>
-            <p>Location: Denmark, Copenhagen</p>
+            <FooterLinkTitle>{t('footer.contactUs')}</FooterLinkTitle>
+            {t('footer.email')} <a href="mailto:sales@cfnadigitalsolution.com" style={{ color: 'white' }}>sales@cfnadigitalsolution.com</a>
+            <p>{t('footer.phone')}(+45) 31 71 79 83 </p>
+            <p>{t('footer.location')} {t('footer.denmarkCopenhagen')}</p>
           </FooterLinkItems>
         </FooterLinksWrapper>
       </FooterLinksContainer>

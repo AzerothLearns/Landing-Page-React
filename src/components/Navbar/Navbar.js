@@ -12,9 +12,11 @@ import { Nav,
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib'
 import { Button } from '../../globalStyles';
-
+import { useTranslation } from 'react-i18next';
 
 function Navbar() {
+
+    const { t, i18n } = useTranslation();
 
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -58,13 +60,17 @@ function Navbar() {
 
     window.addEventListener('resize', showButton);
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     return (
         <>
         <IconContext.Provider value={{ color: '#fff' }}>
             <Nav>
                 <NavbarContainer>
                     <NavLogo to='/'> 
-                        CFNA Digital Solutions
+                        {t('navbar.logo')}
                     </NavLogo>
                     <HamburgerIcon onClick={handleClick}>
                         {click ? <FaTimes /> : <FaBars />}
@@ -72,35 +78,40 @@ function Navbar() {
                     <NavMenu onClick={handleClick} click={click} >
                         <NavItem onClick={handleHomeClick} homeClick={homeClick}>
                             <NavLinks to='/' onClick={closeMobileMenu}>
-                                Home
+                                {t('navbar.home')}
                             </NavLinks>
                         </NavItem>
                     
                     
                         <NavItem onClick={handleServicesClick} servicesClick={servicesClick}>
                             <NavLinks to='/services' onClick={closeMobileMenu}>
-                                Services
+                                {t('navbar.services')}
                             </NavLinks>
                         </NavItem>
                     
                     
                         <NavItem onClick={handleProductsClick} productsClick={productsClick}>
                             <NavLinks to='/Products' onClick={closeMobileMenu}>
-                                Products
+                                {t('navbar.products')}
                             </NavLinks>
                         </NavItem>
 
                         <NavItemBtn >
                             {button ? (
                                 <NavBtnLink to='/sign-up'>
-                                    <Button primary>SIGN UP</Button>
+                                    <Button primary>{t('navbar.signUp')}</Button>
                                 </NavBtnLink>
                             ) : (
                                 <NavBtnLink to='/sign-up'>
-                                    <Button onClick={closeMobileMenu} fontBig primary>SIGN UP</Button>
+                                    <Button onClick={closeMobileMenu} fontBig primary>{t('navbar.signUp')}</Button>
                                 </NavBtnLink>
                             )}
                             
+                        </NavItemBtn>
+                        <NavItemBtn>
+                            <Button onClick={() => changeLanguage(i18n.language === 'en' ? 'da' : 'en')}>
+                                {i18n.language === 'en' ? 'DA' : 'EN'}
+                            </Button>
                         </NavItemBtn>
                     </NavMenu>
                 </NavbarContainer>

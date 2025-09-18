@@ -4,11 +4,10 @@ export const homeObjOne = {
     lightTopLine: true,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Automation Agency',
-    headline: 'Less Work, More Results',
-    description:
-      'We help businesses save time and boost productivity by automating repetitive tasks, so you can focus on growth instead of busywork.',
-    buttonLabel: 'Get Started',
+    topLine: 'home.automationAgency',
+    headline: 'home.lessWork',
+    description: 'home.helpBusinesses',
+    buttonLabel: 'home.getStarted',
     imgStart: '',
     img: require('../../images/svg-1.svg'),
     alt: 'Credit Card',
@@ -21,11 +20,10 @@ export const homeObjOne = {
     lightTopLine: true,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Instant Setup',
-    headline: 'Extremely quick onboarding process',
-    description:
-      "Once you've joined, our team of specialist will reach out to you and get you set up in minutes.",
-    buttonLabel: 'Learn More',
+    topLine: 'home.instantSetup',
+    headline: 'home.quickOnboarding',
+    description: 'home.teamReachOut',
+    buttonLabel: 'home.learnMore',
     imgStart: '',
     img: require('../../images/svg-2.svg'),
     alt: 'Vault',
@@ -39,24 +37,24 @@ export const homeObjOne = {
     lightText: false,
     lightTextDesc: false,
   
-    headline:
-      'Why Choose Us?',
+    headline: 'home.whyChooseUs',
     description: [
       {
-        title: "Tailored Solutions",
-        description: "We don’t do one-size-fits-all. Every workflow we build is customized to your business."
+        title: "home.tailoredSolutions",
+        description: "home.customizedWorkflows"
       },
       {
-        title: "Time & Cost Savings",
-        description: "Free up your team to focus on what really matter;growth, customers, and strategy."
+        title: "home.timeCostSavings",
+        description: "home.focusOnGrowth"
       },
       {
-        title: "Proven Tools & Tech",
-        description: "From CRM integrations to AI-powered automations, we use the best platforms to maximize results."
+        title: "home.provenTools",
+        description: "home.bestPlatforms"
       }
     ],
     buttonLabel: '',
     imgStart: 'start',
+    img: require('../../images/CFNALOGO20.jpg'),
     alt: 'Vault',
     start: 'true'
   };
@@ -67,11 +65,10 @@ export const homeObjOne = {
     lightTopLine: true,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Secure Database',
-    headline: 'All your data is stored on our secure server',
-    description:
-      'You will never have to worry about your information getting leaked. Our team of security experts will ensure your records are kept safe.',
-    buttonLabel: 'Sign Up Now',
+    topLine: 'home.secureDatabase',
+    headline: 'home.dataStored',
+    description: 'home.dataSafe',
+    buttonLabel: 'home.signUpNow',
     imgStart: 'start',
     img: require('../../images/svg-3.svg'),
     alt: 'Vault',

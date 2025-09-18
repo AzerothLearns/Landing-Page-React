@@ -7,6 +7,7 @@ import Services from './pages/Services/Services';
 import Products from './pages/Products/Products';
 import SignUp from './pages/SignUp/SignUp';
 import ScrollToTop from './components/ScrollToTop';
+import './i18n';
 
 function App() {
   return (
