@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Home",
     "services": "Services",
-    "products": "Products",
+    "aboutUs": "About Us",
     "signUp": "SIGN UP",
     "logo": "CFNA Digital Solutions™"
   },
@@ -65,8 +65,7 @@
   },
   "signUp": {
     "signUpToday": "Sign up Today",
-    "exclusiveOffer": "Join today to receive an exclusive offer",
-    "accessDiamondPackage": "Get access to our exclusive diamond king package. Limited quantity available.",
+    "exclusiveOffer": "Join us — less work, more results.",
     "signUp": "Sign Up",
     "secure": "100% Secure",
     "protected": "Stay protected 24/7 anywhere anytime",
@@ -81,6 +80,21 @@
     "accessAnytime": "Never ever have to worry again about saved receipts. We store your data, so you can access it anytime.",
     "signUpNow": "Sign Up Now"
   },
+  "pricing": {
+    "ourServices": "Our Services",
+    "businessProcess": "Business Process Automation",
+    "streamline": "Streamline workflows",
+    "eliminate": "Eliminate repetitive tasks",
+    "boost": "Boost efficiency and productivity",
+    "marketingSales": "Marketing & Sales Automation",
+    "automateLead": "Automate lead generation",
+    "emailCampaigns": "Email campaigns",
+    "salesFollowUps": "Sales follow-ups",
+    "customerSupport": "Customer Support Automation",
+    "automatedTicketing": "Automated ticketing",
+    "chatbots": "Chatbots",
+    "responseSystems": "Response systems"
+  },
   "footer": {
     "contactUs": "Contact Us",
     "sendInquiry": "Send us your inquiry and we'll get back to you soon.",
@@ -94,5 +108,9 @@
     "location": "Location:",
     "denmarkCopenhagen": "Denmark, Copenhagen",
     "copyright": "CFNA Digital Solutions ©"
+  },
+  "about": {
+    "aboutUsTitle": "About Us",
+    "description": "At CFNA Digital Solutions, we believe that businesses grow faster when people focus on strategy and creativity, not repetitive tasks. That’s why we specialize in building smart automation systems that save time, cut costs, and deliver measurable results.\n\nOur mission is simple: to help businesses work smarter, not harder. Whether it’s streamlining sales pipelines, automating customer support, or connecting complex tools through seamless integrations, we design solutions that free up your team to do what they do best.\n\nWith a blend of cutting-edge technology, creativity, and a people-first approach, we’ve helped businesses across industries unlock efficiency, scale effortlessly, and stay ahead of the competition."
   }
 }

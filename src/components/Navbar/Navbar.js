@@ -22,23 +22,15 @@ function Navbar() {
     const [button, setButton] = useState(true);
 
     const [homeClick, setHomeClick] = useState(false);
-    const [servicesClick, setServicesClick] = useState(false);
-    const [productsClick, setProductsClick] = useState(false);
+    const [aboutClick, setAboutClick] = useState(false);
 
     const handleHomeClick = () => {
         setHomeClick(true);
-        setProductsClick(false);
-        setServicesClick(false);
+        setAboutClick(false);
     }
-    const handleServicesClick = () => {
+    const handleAboutClick = () => {
         setHomeClick(false);
-        setProductsClick(false);
-        setServicesClick(true);
-    }
-    const handleProductsClick = () => {
-        setHomeClick(false);
-        setProductsClick(true);
-        setServicesClick(false);
+        setAboutClick(true);
     }
 
     const handleClick = () =>  setClick(!click);
@@ -83,16 +75,9 @@ function Navbar() {
                         </NavItem>
                     
                     
-                        <NavItem onClick={handleServicesClick} servicesClick={servicesClick}>
-                            <NavLinks to='/services' onClick={closeMobileMenu}>
-                                {t('navbar.services')}
-                            </NavLinks>
-                        </NavItem>
-                    
-                    
-                        <NavItem onClick={handleProductsClick} productsClick={productsClick}>
-                            <NavLinks to='/Products' onClick={closeMobileMenu}>
-                                {t('navbar.products')}
+                        <NavItem onClick={handleAboutClick} aboutClick={aboutClick}>
+                            <NavLinks to='/about' onClick={closeMobileMenu}>
+                                {t('navbar.aboutUs')}
                             </NavLinks>
                         </NavItem>
 
@@ -121,4 +106,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;

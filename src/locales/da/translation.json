@@ -2,7 +2,7 @@
   "navbar": {
     "home": "Hjem",
     "services": "Tjenester",
-    "products": "Produkter",
+    "aboutUs": "Om Os",
     "signUp": "TILMELD DIG",
     "logo": "CFNA Digital Solutions™"
   },
@@ -81,6 +81,21 @@
     "accessAnytime": "Du behøver aldrig mere at bekymre dig om gemte kvitteringer. Vi gemmer dine data, så du kan få adgang til dem når som helst.",
     "signUpNow": "Tilmeld Dig Nu"
   },
+  "pricing": {
+    "ourServices": "Vores Tjenester",
+    "businessProcess": "Forretningsproces Automatisering",
+    "streamline": "Strømlin arbejdsprocesser",
+    "eliminate": "Eliminér gentagne opgaver",
+    "boost": "Øg effektivitet og produktivitet",
+    "marketingSales": "Marketing & Salgs Automatisering",
+    "automateLead": "Automatiser lead-generering",
+    "emailCampaigns": "Email-kampagner",
+    "salesFollowUps": "Salgs opfølgninger",
+    "customerSupport": "Kundesupport Automatisering",
+    "automatedTicketing": "Automatiseret billetudstedelse",
+    "chatbots": "Chatbots",
+    "responseSystems": "Svarsystemer"
+  },
   "footer": {
     "contactUs": "Kontakt Os",
     "sendInquiry": "Send os din forespørgsel, og vi vender tilbage til dig snart.",
@@ -94,5 +109,9 @@
     "location": "Lokation:",
     "denmarkCopenhagen": "Danmark, København",
     "copyright": "CFNA Digital Solutions ©"
+  },
+  "about": {
+    "aboutUsTitle": "Om Os",
+    "description": "Hos CFNA Digital Solutions tror vi på, at virksomheder vokser hurtigere, når mennesker fokuserer på strategi og kreativitet, ikke gentagne opgaver. Derfor specialiserer vi os i at bygge smarte automatiseringssystemer, der sparer tid, reducerer omkostninger og leverer målbare resultater.\n\nVores mission er enkel: at hjælpe virksomheder med at arbejde smartere, ikke hårdere. Uanset om det er at strømline salgs pipelines, automatisere kundesupport eller forbinde komplekse værktøjer gennem sømløse integrationer, designer vi løsninger, der frigør dit team til at gøre det, de gør bedst.\n\nMed en blanding af cutting-edge teknologi, kreativitet og en mennesker-først tilgang har vi hjulpet virksomheder på tværs af brancher med at låse op for effektivitet, skalere problemfrit og holde sig foran konkurrenterne."
   }
 }

@@ -1,10 +1,8 @@
 import React from 'react';
 import { Button } from '../../globalStyles';
-import { AiFillThunderbolt } from 'react-icons/ai';
-import { GiCrystalBars } from 'react-icons/gi';
-import { GiCutDiamond, GiRock } from 'react-icons/gi';
-import { GiFloatingCrystal } from 'react-icons/gi';
-import { IconContext } from 'react-icons/lib';
+import { AiOutlineSetting } from 'react-icons/ai';
+import { FaBullhorn } from 'react-icons/fa';
+import { FaHeadset } from 'react-icons/fa';
 import {
   PricingSection,
   PricingWrapper,
@@ -22,7 +20,6 @@ import {
 
  const Pricing = () => {
   return (
-    <IconContext.Provider value={{ color: '#a9b3c1', size: 64 }}>
       <PricingSection>
         <PricingWrapper>
           <PricingHeading>Our Services</PricingHeading>
@@ -30,55 +27,45 @@ import {
             <PricingCard to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiRock />
+                  <AiOutlineSetting color='#4B59F7' size={64} />
                 </PricingCardIcon>
-                <PricingCardPlan>Starter Pack</PricingCardPlan>
-                <PricingCardCost>$99.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
-                <PricingCardFeatures>
-                  <PricingCardFeature>100 New Users</PricingCardFeature>
-                  <PricingCardFeature>$10,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Retargeting analytics</PricingCardFeature>
-                </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <PricingCardPlan>Business Process Automation</PricingCardPlan>
+                <ul>
+                  <PricingCardFeature>Streamline workflows</PricingCardFeature>
+                  <PricingCardFeature>Eliminate repetitive tasks</PricingCardFeature>
+                  <PricingCardFeature>Boost efficiency and productivity</PricingCardFeature>
+                </ul>
               </PricingCardInfo>
             </PricingCard>
             <PricingCard to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiCrystalBars />
+                  <FaBullhorn color='#4B59F7' size={64} />
                 </PricingCardIcon>
-                <PricingCardPlan>Gold Rush</PricingCardPlan>
-                <PricingCardCost>$299.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
-                <PricingCardFeatures>
-                  <PricingCardFeature>1000 New Users</PricingCardFeature>
-                  <PricingCardFeature>$50,000 Budget</PricingCardFeature>
-                  <PricingCardFeature>Lead Gen Analytics</PricingCardFeature>
-                </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <PricingCardPlan>Marketing & Sales Automation</PricingCardPlan>
+                <ul>
+                  <PricingCardFeature>Automate lead generation</PricingCardFeature>
+                  <PricingCardFeature>Email campaigns</PricingCardFeature>
+                  <PricingCardFeature>Sales follow-ups</PricingCardFeature>
+                </ul>
               </PricingCardInfo>
             </PricingCard>
             <PricingCard to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
-                  <GiCutDiamond />
+                  <FaHeadset color='#4B59F7' size={64} />
                 </PricingCardIcon>
-                <PricingCardPlan>Diamond Kings</PricingCardPlan>
-                <PricingCardCost>$999.99</PricingCardCost>
-                <PricingCardLength>per month</PricingCardLength>
-                <PricingCardFeatures>
-                  <PricingCardFeature>Unlimited Users</PricingCardFeature>
-                  <PricingCardFeature>Unlimited Budget</PricingCardFeature>
-                  <PricingCardFeature>24/7 Support</PricingCardFeature>
-                </PricingCardFeatures>
-                <Button primary>Choose Plan</Button>
+                <PricingCardPlan>Customer Support Automation</PricingCardPlan>
+                <ul>
+                  <PricingCardFeature>Automated ticketing</PricingCardFeature>
+                  <PricingCardFeature>Chatbots</PricingCardFeature>
+                  <PricingCardFeature>Response systems</PricingCardFeature>
+                </ul>
               </PricingCardInfo>
             </PricingCard>
           </PricingContainer>
         </PricingWrapper>
       </PricingSection>
-    </IconContext.Provider>
   );
 }
 
