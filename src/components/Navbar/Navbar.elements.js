@@ -13,6 +13,7 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
 `
 
 export const NavbarContainer = styled(Container)`
@@ -96,9 +97,13 @@ export const NavLinks = styled(Link)`
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem; // More padding
     height: 100%;
-    
+    transition: all 0.2s ease-in-out; // Smooth hover
+    &:hover {
+        color: #4b59f7;
+        border-bottom: 4px solid #4b59f7; // Consistent color
+    }
 
     @media screen and (max-width: 960px) {
         text-align: center;

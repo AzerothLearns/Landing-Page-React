@@ -12,15 +12,19 @@ const GlobalStyles = createGlobalStyle`
   scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 }
 *::-webkit-scrollbar {
-  width: 0.5px;
+  width: 8px;
 }
 *::-webkit-scrollbar-track {
   background: transparent;
 }
 *::-webkit-scrollbar-thumb {
   background: rgba(155, 155, 155, 0.5);
-  border-radius: 20px;
-  border: transparent;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(155, 155, 155, 0.7);
 }
 `;
 
@@ -39,25 +43,30 @@ export const Container = styled.div`
   }
 `;
 
+// Enhanced button styles for consistency
 export const Button = styled.button`
-  border-radius: 4px;
+  border-radius: 6px; // Slightly more rounded for modernity
   background: ${({ primary }) => (primary ? '#4B59F7' : '#0467FB')};
   white-space: nowrap;
-  padding: ${({ big }) => (big ? '12px 64px' : '10px 20px')};
+  padding: ${({ big }) => (big ? '14px 70px' : '12px 24px')}; // Better padding
   color: #fff;
-  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+  font-size: ${({ fontBig }) => (fontBig ? '22px' : '18px')}; // Slightly larger for emphasis
+  font-weight: 600; // Added weight for boldness
   outline: none;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  transition: all 0.3s ease-in-out; // Smoother transition
   &:hover {
-    transition: all 0.3s ease-out;
-    background: #fff;
-    background-color: ${({ primary }) => (primary ? '#0467FB' : '#4B59F7')};
+    transform: translateY(-2px); // Lift effect on hover
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: ${({ primary }) => (primary ? '#0467FB' : '#4B59F7')};
   }
   @media screen and (max-width: 960px) {
     width: 100%;
+    padding: ${({ big }) => (big ? '16px 0' : '14px 0')};
   }
 `;
 
 
-export default  GlobalStyles;   
+export default  GlobalStyles;

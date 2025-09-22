@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.div`
   background-color: #101522;
-  padding: 4rem 0 2rem 0;
+  padding: 5rem 0 3rem 0; // More padding
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); // Subtle inner shadow
 `;
 
 export const FooterSubscription = styled.section`
@@ -23,21 +24,23 @@ export const FooterSubscription = styled.section`
 `;
 
 export const FooterSubHeading = styled.p`
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  margin-bottom: 24px;
-  font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif; // Consistent font
+  margin-bottom: 28px;
+  font-size: 28px; // Larger
+  font-weight: 600;
 `;
 
 export const FooterSubText = styled.p`
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   font-size: 20px;
+  line-height: 24px;
 `;
 
 export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 12px; // Better spacing between inputs
 
   @media screen and (max-width: 820px) {
     flex-direction: column;
@@ -46,17 +49,18 @@ export const Form = styled.form`
 `;
 
 export const FormInput = styled.input`
-  padding: 10px 20px;
-  border-radius: 2px;
-  margin-right: 10px;
+  padding: 12px 24px; // More padding
+  border-radius: 4px;
+  margin-right: 0; // Remove margin, use gap
   outline: none;
-  border: none;
-  font-size: 16px;
   border: 1px solid #fff;
-  height: 40px;
+  font-size: 16px;
+  height: 44px; // Taller
+  background: rgba(255, 255, 255, 0.1); // Semi-transparent for style
+  color: #fff;
 
   &::placeholder {
-    color: #242424;
+    color: #a9b3c1;
   }
 
   @media screen and (max-width: 820px) {
@@ -66,19 +70,20 @@ export const FormInput = styled.input`
 `;
 
 export const FormTextarea = styled.textarea`
-  padding: 10px 20px;
-  border-radius: 2px;
-  margin-right: 10px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  margin-right: 0;
   outline: none;
-  border: none;
-  font-size: 16px;
   border: 1px solid #fff;
+  font-size: 16px;
   resize: vertical;
-  height: 40px;
-  min-height: 40px;
+  height: 44px; // Standardized to match FormInput
+  min-height: 44px; // Standardized to match FormInput
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 
   &::placeholder {
-    color: #242424;
+    color: #a9b3c1;
   }
 
   @media screen and (max-width: 820px) {
@@ -186,7 +191,6 @@ export const SocialIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 240px;
-
 `;
 
 export const SocialIconLink = styled.a`
