@@ -5,7 +5,7 @@ export const homeObjOne = {
     lightTextDesc: false,
     topLine: 'signUp.signUpToday',
     headline: 'signUp.exclusiveOffer',
-    description: 'signUp.accessDiamondPackage',
+    description: '',
     buttonLabel: 'signUp.signUp',
     imgStart: '',
     img: require('../../images/svg-1.svg'),
