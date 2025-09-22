@@ -3,6 +3,7 @@ import { Button } from '../../globalStyles';
 import { AiOutlineSetting } from 'react-icons/ai';
 import { FaBullhorn } from 'react-icons/fa';
 import { FaHeadset } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import {
   PricingSection,
   PricingWrapper,
@@ -19,21 +20,23 @@ import {
 } from './Pricing.elements';
 
  const Pricing = () => {
+  const { t } = useTranslation();
+
   return (
       <PricingSection>
         <PricingWrapper>
-          <PricingHeading>Our Services</PricingHeading>
+          <PricingHeading>{t('pricing.ourServices')}</PricingHeading>
           <PricingContainer>
             <PricingCard to='/sign-up'>
               <PricingCardInfo>
                 <PricingCardIcon>
                   <AiOutlineSetting color='#4B59F7' size={64} />
                 </PricingCardIcon>
-                <PricingCardPlan>Business Process Automation</PricingCardPlan>
+                <PricingCardPlan>{t('pricing.businessProcess')}</PricingCardPlan>
                 <ul>
-                  <PricingCardFeature>Streamline workflows</PricingCardFeature>
-                  <PricingCardFeature>Eliminate repetitive tasks</PricingCardFeature>
-                  <PricingCardFeature>Boost efficiency and productivity</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.streamline')}</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.eliminate')}</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.boost')}</PricingCardFeature>
                 </ul>
               </PricingCardInfo>
             </PricingCard>
@@ -42,11 +45,11 @@ import {
                 <PricingCardIcon>
                   <FaBullhorn color='#4B59F7' size={64} />
                 </PricingCardIcon>
-                <PricingCardPlan>Marketing & Sales Automation</PricingCardPlan>
+                <PricingCardPlan>{t('pricing.marketingSales')}</PricingCardPlan>
                 <ul>
-                  <PricingCardFeature>Automate lead generation</PricingCardFeature>
-                  <PricingCardFeature>Email campaigns</PricingCardFeature>
-                  <PricingCardFeature>Sales follow-ups</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.automateLead')}</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.emailCampaigns')}</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.salesFollowUps')}</PricingCardFeature>
                 </ul>
               </PricingCardInfo>
             </PricingCard>
@@ -55,11 +58,11 @@ import {
                 <PricingCardIcon>
                   <FaHeadset color='#4B59F7' size={64} />
                 </PricingCardIcon>
-                <PricingCardPlan>Customer Support Automation</PricingCardPlan>
+                <PricingCardPlan>{t('pricing.customerSupport')}</PricingCardPlan>
                 <ul>
-                  <PricingCardFeature>Automated ticketing</PricingCardFeature>
-                  <PricingCardFeature>Chatbots</PricingCardFeature>
-                  <PricingCardFeature>Response systems</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.automatedTicketing')}</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.chatbots')}</PricingCardFeature>
+                  <PricingCardFeature>{t('pricing.responseSystems')}</PricingCardFeature>
                 </ul>
               </PricingCardInfo>
             </PricingCard>
